@@ -8,21 +8,6 @@
 
 
     <ImageButton
-        android:id="@+id/imageButton_Back4"
-        style="@android:style/Widget.ImageButton"
-        android:layout_width="25dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/back"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.041"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.011" />
-
-    <ImageButton
         android:id="@+id/imageButtonMenu_Config4"
         style="@android:style/Widget.ImageButton"
         android:layout_width="40dp"
@@ -197,7 +182,7 @@
                 android:layout_width="75dp"
                 android:layout_height="wrap_content"
                 android:background="@color/colorPrimary"
-                android:text="Email"
+                android:text="Correo"
                 android:textColor="@color/colorAccent"
                 android:textSize="18sp" />
 
