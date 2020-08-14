@@ -16,7 +16,7 @@ public class Producto_Catalogo extends AppCompatActivity {
     }
 
     public void AddProd(View view){
-        Toast.makeText(this,"Producto añadido al carrito",Toast.LENGTH_SHORT);
+        Toast.makeText(this,"Producto añadido al carrito",Toast.LENGTH_SHORT).show();
     }
     public void Catalogos(View view){
         Intent intent = new Intent(this, Catalogos.class);
