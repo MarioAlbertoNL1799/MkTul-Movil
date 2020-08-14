@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Pais">
+        <item>Seleccionar...</item>
+        <item>Argentina</item>
+        <item>Bolivia</item>
+        <item>Colombia</item>
+        <item>Hidalgo</item>
+    </string-array>
+
+</resources>

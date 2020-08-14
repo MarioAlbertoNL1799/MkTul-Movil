@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Estado">
+        <item>Seleccionar...</item>
+        <item>Acatlan</item>
+        <item>Acaxochitlan</item>
+        <item>Actopan</item>
+        <item>Cuautepec</item>
+        <item>Huasca</item>
+        <item>Huehuetla</item>
+        <item>Pachuca</item>
+        <item>Mineral de la Reforma</item>
+        <item>San Bartolo Tutotepec</item>
+        <item>Singuilucan</item>
+        <item>Tenango de Doria</item>
+        <item>Tulancingo de Bravo</item>
+    </string-array>
+</resources>
