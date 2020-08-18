@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Toast;
 
 public class Categorias extends AppCompatActivity {
-
+    String boton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,47 +18,56 @@ public class Categorias extends AppCompatActivity {
     public void Menu(View view){
         Intent intent = new Intent(this, Config_Cuenta.class);
         startActivity(intent);
+        finish();
     }
     // Categorias
     public void CatalogosComputo(View view){
-        Toast.makeText(this,"Dirigiendo catalogos de Computo", Toast.LENGTH_LONG);
+        boton = "Computo";
+        Toast.makeText(this,"Dirigiendo catalogos de: "+ boton, Toast.LENGTH_LONG).show();
         Intent intent = new Intent(this, Catalogos.class);
         startActivity(intent);
     }
     public void CatalogosDomesticos(View view){
-        Toast.makeText(this,"Dirigiendo catalogos de Electrodomesticos", Toast.LENGTH_LONG);
+        boton= "Electrodomesticos";
+        Toast.makeText(this,"Dirigiendo catalogos de: "+ boton, Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, Catalogos.class);
         startActivity(intent);
 
     }
     public void CatalogosMascota(View view){
-        Toast.makeText(this,"Dirigiendo catalogos de Mascotas", Toast.LENGTH_LONG);
+        boton = "Mascotas";
+        Toast.makeText(this,"Dirigiendo catalogos de: " + boton, Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, Catalogos.class);
         startActivity(intent);
     }
     public void CatalogosInfantil(View view){
-        Toast.makeText(this,"Dirigiendo catalogos de Niños", Toast.LENGTH_LONG);
+        boton = "Niños";
+        Toast.makeText(this,"Dirigiendo catalogos de: " + boton, Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, Catalogos.class);
         startActivity(intent);
     }
     public void CatalogosHombre(View view){
-        Toast.makeText(this,"Dirigiendo catalogos de Hombres", Toast.LENGTH_LONG);
+        boton = "Hombre";
+        Toast.makeText(this,"Dirigiendo catalogos de: " + boton, Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, Catalogos.class);
         startActivity(intent);
     }
     public void CatalogosMujer(View view){
-        Toast.makeText(this,"Dirigiendo catalogos de Mujeres", Toast.LENGTH_LONG);
+        boton = "Mujer";
+        Toast.makeText(this,"Dirigiendo catalogos de: " + boton, Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, Catalogos.class);
         startActivity(intent);
     }
     public void CatalogosMuebles(View view){
-        Toast.makeText(this,"Dirigiendo catalogos de Muebles", Toast.LENGTH_LONG);
+        boton = "Muebles";
+        Toast.makeText(this,"Dirigiendo catalogos de: " + boton, Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, Catalogos.class);
         startActivity(intent);
     }
     public void CatalogosLibros(View view){
+        boton = "Libros";
         Intent intent = new Intent(this, Catalogos.class);
-        Toast.makeText(this,"Dirigiendo catalogos de Libros", Toast.LENGTH_LONG);
+        Toast.makeText(this,"Dirigiendo catalogos de: " + boton, Toast.LENGTH_SHORT).show();
         startActivity(intent);
     }
 }

@@ -21,5 +21,6 @@ public class Producto_Catalogo extends AppCompatActivity {
     public void Catalogos(View view){
         Intent intent = new Intent(this, Catalogos.class);
         startActivity(intent);
+        finish();
     }
 }
