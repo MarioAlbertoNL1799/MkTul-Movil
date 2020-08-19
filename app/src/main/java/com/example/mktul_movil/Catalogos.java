@@ -12,13 +12,23 @@ import android.widget.GridLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
 import java.util.ArrayList;
 import java.util.List;
+import java.net.URL;
 
 public class Catalogos extends AppCompatActivity {
     String cat,lista;
     TextView texcat,listaProd;
     List<CatalogoObject> lcat;
+    CatalogoAdapter adapter;
+    private  String catalogosURL = "https://marketul.herokuapp.com/api/categoria-computo/?format=json";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +42,8 @@ public class Catalogos extends AppCompatActivity {
         RecyclerView rview = findViewById(R.id.recyclerv);
 
         lcat  = new ArrayList<>();
+
+        webREST(catalogosURL);
 
         lcat.add(new CatalogoObject("MKTUL","Marco Antonio",R.drawable.computadoras));
         lcat.add(new CatalogoObject("Radioshack","Javier Gomez",R.drawable.computadoras));
@@ -51,4 +63,47 @@ public class Catalogos extends AppCompatActivity {
         finish();
     }
 
+    private void webREST(String respuestaURL){
+        try{
+            URL url = new URL(respuestaURL);
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            Log.e("Abriendo conexion",connection.toString());
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+            String line = "";
+            String webResult="";
+            while ((line = bufferedReader.readLine()) != null){
+                webResult += line;
+            }
+            bufferedReader.close();
+            parseInformation(webResult);
+        }catch(Exception e){
+            Log.e("Error de conexion",e.getMessage());
+        }
+    }
+
+
+    private void parseInformation(String jsonResult){
+        JSONArray jsonArray = null;
+        String correo, vendedor,nomVend, validado,telefono;
+        try{
+            jsonArray = new JSONArray(jsonResult);
+            Log.i("JSON","Datos: " + jsonArray.toString());
+        }catch (JSONException e){
+            Log.i("Error de datos",e.getMessage());
+        }
+        for(int i=0;i<jsonArray.length();i++){
+            try{
+                JSONObject jsonObject = jsonArray.getJSONObject(i);
+                vendedor = jsonObject.getString("idVend");
+                nomVend = jsonObject.getString("nombreVend");
+                correo = jsonObject.getString("correo");
+                telefono = jsonObject.getString("telefono");
+                //adapter.add(id_as + ": " + correo +" |validado: "+validado);
+                Log.e("Datos: nombre= "+nomVend+", correo= "+correo+" ,telefono: "+telefono,null);
+            }catch (JSONException e){
+                Log.e("Error parseo",e.getMessage());
+            }
+        }
+
+    }
 }
