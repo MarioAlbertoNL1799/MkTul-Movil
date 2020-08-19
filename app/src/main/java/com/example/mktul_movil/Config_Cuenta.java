@@ -10,7 +10,6 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -33,7 +32,7 @@ public class Config_Cuenta extends AppCompatActivity {
         //campos de la vista
         nombre = findViewById(R.id.eTxt_ConfNombre);
         telefono = findViewById(R.id.eTxtConfTel);
-        mail = findViewById(R.id.eTxtConfigEmail);
+        mail = findViewById(R.id.eTxtConfEmail);
 
         webS(Urldata);
 
