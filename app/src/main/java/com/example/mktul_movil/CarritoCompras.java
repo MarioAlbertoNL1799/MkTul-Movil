@@ -1,6 +1,8 @@
 package com.example.mktul_movil;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,10 +18,13 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CarritoCompras extends AppCompatActivity {
     private String GenCarro = "https://marketul.herokuapp.com/api/carrito/?format=json";
     TextView cantidad, total;
+    List<Producto> lisrprod;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,12 +32,25 @@ public class CarritoCompras extends AppCompatActivity {
         setContentView(R.layout.activity_carrito_compras);
         StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().permitNetwork().build());
 
+
+
         //General
         cantidad = findViewById(R.id.textView_Num_Producto);
         total = findViewById(R.id.textView_Precio);
         Carrito_total(GenCarro);
 
 
+        //  Cards
+        RecyclerView recview = findViewById(R.id.Lista_productos);
+
+        lisrprod= new ArrayList<>();
+        lisrprod.add(new Producto("Producto 1","$ 1500.00",1,R.drawable.libros));
+        lisrprod.add(new Producto("Huawei","$ 1200.00",1,R.drawable.libros));
+        lisrprod.add(new Producto("Impresora","$ 1500.00",1,R.drawable.libros));
+
+        CarritoAdapter adapter = new CarritoAdapter(this, lisrprod);
+        recview.setAdapter(adapter);
+        recview.setLayoutManager(new GridLayoutManager(this,1));
     }
 
     public void Inicio(View view) {
@@ -55,6 +73,7 @@ public class CarritoCompras extends AppCompatActivity {
     }
 
 
+    //Metodo general
     private void Carrito_total(String respuestaURL){
         try{
             URL url = new URL(respuestaURL);
