@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -23,8 +24,9 @@ import java.util.List;
 
 public class CarritoCompras extends AppCompatActivity {
     private String GenCarro = "https://marketul.herokuapp.com/api/carrito/?format=json";
+    private String lcarrito = "https://marketul.herokuapp.com/api/carrito-productos/?format=json";
     TextView cantidad, total;
-    List<Producto> lisrprod;
+    List<Producto> listcar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,12 +45,14 @@ public class CarritoCompras extends AppCompatActivity {
         //  Cards
         RecyclerView recview = findViewById(R.id.Lista_productos);
 
-        lisrprod= new ArrayList<>();
-        lisrprod.add(new Producto("Producto 1","$ 1500.00",1,R.drawable.libros));
-        lisrprod.add(new Producto("Huawei","$ 1200.00",1,R.drawable.libros));
-        lisrprod.add(new Producto("Impresora","$ 1500.00",1,R.drawable.libros));
 
-        CarritoAdapter adapter = new CarritoAdapter(this, lisrprod);
+        listcar= new ArrayList<>();
+        CarroList(lcarrito);
+        /*listcar.add(new Producto("Huawei 1","$ 1500.00",1,R.drawable.libros));
+        lisrprod.add(new Producto("Huawei","$ 1200.00",1,R.drawable.libros));
+        lisrprod.add(new Producto("Impresora","$ 1500.00",1,R.drawable.libros));*/
+
+        CarritoAdapter adapter = new CarritoAdapter(this, listcar);
         recview.setAdapter(adapter);
         recview.setLayoutManager(new GridLayoutManager(this,1));
     }
@@ -108,6 +112,50 @@ public class CarritoCompras extends AppCompatActivity {
         }catch (JSONException e){
             Log.e("Error parseo ",e.getMessage());
         }
+    }
+
+    //Lista de productos
+    private void CarroList(String respuestaURL){
+        try{
+            URL url = new URL(respuestaURL);
+            HttpURLConnection connection2 = (HttpURLConnection) url.openConnection();
+            Log.e("Abriendo conexion 2",connection2.toString());
+            BufferedReader bufferedReader2 = new BufferedReader(new InputStreamReader(connection2.getInputStream()));
+            String line = "";
+            String Res="";
+            while ((line = bufferedReader2.readLine()) != null){
+                Res += line;
+            }
+            bufferedReader2.close();
+            parsePList(Res);
+        }catch(Exception e){
+            Log.e("Error de conexion 2",e.getMessage());
+        }
+    }
+
+    private void parsePList(String jsonResult){
+        JSONArray jsonArray = null;
+        String prod, precio,idp;
+        try{
+            jsonArray = new JSONArray(jsonResult);
+            Log.e("JSON List 2","Datos: " + jsonArray.toString());
+        }catch (JSONException e){
+            Log.i("Error de datos",e.getMessage());
+        }
+        for(int i=0;i<jsonArray.length();i++){
+            try{
+                JSONObject jsonObject = jsonArray.getJSONObject(i);
+                prod = jsonObject.getString("nombreProd");
+                precio = jsonObject.getString("precioProd");
+                idp = jsonObject.getString("idProd");
+                //adapter.add(id_as + ": " + correo +" |validado: "+validado);
+                listcar.add(new Producto(prod,"$ "+ precio,Integer.parseInt(idp),R.drawable.phone));
+                Log.e("Dato"+i, "nombreproducto= "+prod+", precio= "+precio+" ,id: "+idp);
+            }catch (JSONException e){
+                Log.e("Error parseo 2",e.getMessage());
+            }
+        }
+
     }
 
 }

@@ -1,7 +1,6 @@
 package com.example.mktul_movil;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,9 +17,9 @@ public class CarritoAdapter extends RecyclerView.Adapter<CarritoAdapter.ViewHold
     private Context context;
     private List<Producto> lcar;
 
-    public CarritoAdapter(Context context, List <Producto> listas){
+    public CarritoAdapter(Context context, List <Producto> lcar){
         this.context = context;
-        this.lcar = listas;
+        this.lcar = lcar;
     }
 
     @NonNull

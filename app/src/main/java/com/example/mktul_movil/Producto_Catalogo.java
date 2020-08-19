@@ -103,7 +103,6 @@ public class Producto_Catalogo extends AppCompatActivity {
                 prod = jsonObject.getString("nombreProd");
                 precio = jsonObject.getString("precioProd");
                 idp = jsonObject.getString("idProd");
-                //adapter.add(id_as + ": " + correo +" |validado: "+validado);
                 items.add(new Producto(prod,"$ "+ precio,Integer.parseInt(idp),R.drawable.phone));
                 Log.e("Datos", "nombreproducto= "+prod+", precio= "+precio+" ,id: "+idp);
             }catch (JSONException e){
