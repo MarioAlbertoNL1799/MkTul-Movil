@@ -297,7 +297,8 @@
         android:id="@+id/Lista_productos"
         android:layout_width="match_parent"
         android:layout_height="350dp"
-        android:layout_marginHorizontal="7dp"
+        android:foregroundGravity="center"
+        android:layout_marginHorizontal="50dp"
         android:layout_marginTop="40dp"
         app:layout_constraintTop_toTopOf="@+id/button_Pagar"
         tools:layout_editor_absoluteX="14dp" />

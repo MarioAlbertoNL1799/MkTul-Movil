@@ -45,12 +45,12 @@ public class CarritoCompras extends AppCompatActivity {
 
         lisrprod= new ArrayList<>();
         lisrprod.add(new Producto("Producto 1","$ 1500.00",1,R.drawable.libros));
-        lisrprod.add(new Producto("Huawei","$ 1500.00",1,R.drawable.libros));
+        lisrprod.add(new Producto("Huawei","$ 1200.00",1,R.drawable.libros));
         lisrprod.add(new Producto("Impresora","$ 1500.00",1,R.drawable.libros));
 
-        ProductoAdapter adapter = new ProductoAdapter(this, lisrprod);
+        CarritoAdapter adapter = new CarritoAdapter(this, lisrprod);
         recview.setAdapter(adapter);
-        recview.setLayoutManager(new GridLayoutManager(this,2));
+        recview.setLayoutManager(new GridLayoutManager(this,1));
     }
 
     public void Inicio(View view) {

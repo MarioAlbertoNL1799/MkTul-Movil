@@ -25,7 +25,7 @@ public class CarritoAdapter extends RecyclerView.Adapter<CarritoAdapter.ViewHold
 
     @NonNull
     @Override
-    public CarritoAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View v;
         LayoutInflater linf = LayoutInflater.from(context);
         v = linf.inflate(R.layout.card_lista_carrito,viewGroup, false);
@@ -35,19 +35,19 @@ public class CarritoAdapter extends RecyclerView.Adapter<CarritoAdapter.ViewHold
     @Override
     public void onBindViewHolder(@NonNull final CarritoAdapter.ViewHolder viewHolder, int i) {
         viewHolder.nameProd.setText(lcar.get(i).getNombreProd());
-        viewHolder.nameProd.setText(lcar.get(i).getPrecioProd());
+        viewHolder.costProd.setText(lcar.get(i).getPrecioProd());
 
         //click
-        viewHolder.dir.setOnClickListener(new View.OnClickListener() {
+        /*viewHolder.dir.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 //Toast.makeText(context,"Dirigir a: " + viewHolder.nomCat.getText().toString(),Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(context, Producto_Catalogo.class);
                 intent.putExtra("Tienda", viewHolder.nameProd.getText().toString());
                 intent.putExtra("Vendedor", viewHolder.costProd.getText().toString());
                 context.startActivity(intent);
             }
-        });
+        });*/
     }
 
 
