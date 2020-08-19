@@ -16,7 +16,7 @@
         android:layout_marginBottom="8dp"
         android:text="Telefonía"
         android:textAlignment="center"
-        android:textColor="#323232"
+        android:textColor="@color/Title"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -57,9 +57,9 @@
         android:layout_height="2dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        android:background="#C4C3C3"
-        android:backgroundTint="#FFC4C3C3"
-        android:foreground="#FFC4C3C3"
+        android:background="@color/Title"
+        android:backgroundTint="@color/Title"
+        android:foreground="@color/Title"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -143,5 +143,22 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.988"
         tools:text="775 123 34 35" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/marco"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.837"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.907"
+        app:srcCompat="@drawable/marco" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,7 +17,7 @@
         android:layout_marginBottom="8dp"
         android:text="Computo"
         android:textAlignment="center"
-        android:textColor="#323232"
+        android:textColor="@color/Title"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -22,23 +22,25 @@
             android:scaleType="centerCrop" />
 
         <TextView
+            android:id="@+id/nomProd"
             android:layout_width="match_parent"
             android:layout_height="40sp"
-            android:textSize="12sp"
             android:layout_marginVertical="5dp"
-            android:id="@+id/nomProd"
+            android:gravity="center"
             android:text="Producto"
-            android:textColor="#000"
-            android:gravity="center"/>
+            android:textColor="@color/Title"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/cat_precioProd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="5sp"
-            android:text="$0.00"
-            android:textSize="10sp"
             android:gravity="center"
-            android:id="@+id/cat_precioProd" />
+            android:text="$0.00"
+            android:textSize="12sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/id_cat_prod"
@@ -49,17 +51,19 @@
 
         <Button
             android:id="@+id/button_AnadirCarrito1"
-            android:layout_width="130dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="15sp"
+            android:layout_width="140dp"
+            android:layout_height="33dp"
             android:layout_gravity="center"
-            android:background="@android:color/holo_green_light"
+            android:layout_marginTop="15sp"
+            android:background="@drawable/button_redondo_registro"
             android:onClick="AddProd"
             android:text="Añadir al carrito"
-            android:textAllCaps="false"
+            android:textAlignment="center"
+            android:textAllCaps="true"
             android:textColor="@android:color/background_light"
-            android:textSize="16sp" />
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
-        </LinearLayout>
+    </LinearLayout>
 
     </androidx.cardview.widget.CardView>
