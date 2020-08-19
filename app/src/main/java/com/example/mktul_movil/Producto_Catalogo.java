@@ -1,47 +1,40 @@
 package com.example.mktul_movil;
 
 import androidx.appcompat.app.AppCompatActivity;
-<<<<<<< Updated upstream
-=======
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
->>>>>>> Stashed changes
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-<<<<<<< Updated upstream
-=======
-import android.widget.Adapter;
-import android.widget.GridLayout;
->>>>>>> Stashed changes
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Producto_Catalogo extends AppCompatActivity {
+
+    List<Producto> items;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_producto__catalogo);
-<<<<<<< Updated upstream
-=======
 
         RecyclerView recview = findViewById(R.id.recycler);
 
-        items = new ArrayList<Producto>();
+        items = new ArrayList<>();
 
-        items.add(new Producto("Producto 1"));
-        items.add(new Producto("Producto 2"));
-        items.add(new Producto("Producto 3"));
+        //creacion de objetos acorde el constructor creado
+        items.add(new Producto("Producto 1","$ 1500.00",1,R.drawable.libros));
+        items.add(new Producto("Huawei","$ 1500.00",1,R.drawable.libros));
+        items.add(new Producto("Impresora","$ 1500.00",1,R.drawable.libros));
 
-        recview.setHasFixedSize(true);
-
-        recview.setLayoutManager(new GridLayoutManager(this,2));
-        adapter = new Producto_Adapter(this,items);
+        ProductoAdapter adapter = new ProductoAdapter(this, items);
         recview.setAdapter(adapter);
+        recview.setLayoutManager(new GridLayoutManager(this,2));
 
->>>>>>> Stashed changes
+
     }
 
     public void AddProd(View view){
