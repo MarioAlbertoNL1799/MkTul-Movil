@@ -94,7 +94,7 @@
         tools:text="Teléfono" />
 
     <EditText
-        android:id="@+id/eTxtConfigEmail"
+        android:id="@+id/eTxtConfEmail"
         android:layout_width="250dp"
         android:layout_height="45dp"
         android:layout_marginTop="8dp"
