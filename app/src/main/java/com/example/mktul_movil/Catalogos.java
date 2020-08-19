@@ -45,13 +45,6 @@ public class Catalogos extends AppCompatActivity {
 
         webREST(catalogosURL);
 
-        lcat.add(new CatalogoObject("MKTUL","Marco Antonio",R.drawable.computadoras));
-        lcat.add(new CatalogoObject("Radioshack","Javier Gomez",R.drawable.computadoras));
-        lcat.add(new CatalogoObject("Steren","Daniel Diaz",R.drawable.computadoras));
-        lcat.add(new CatalogoObject("Electronics","Alejandra",R.drawable.computadoras));
-        lcat.add(new CatalogoObject("Roboticx","Diego",R.drawable.computadoras));
-        lcat.add(new CatalogoObject("Computo Tec","Mario",R.drawable.computadoras));
-
         CatalogoAdapter adapter = new CatalogoAdapter(this, lcat);
         rview.setAdapter(adapter);
         rview.setLayoutManager(new GridLayoutManager(this,2));
@@ -99,7 +92,8 @@ public class Catalogos extends AppCompatActivity {
                 correo = jsonObject.getString("correo");
                 telefono = jsonObject.getString("telefono");
                 //adapter.add(id_as + ": " + correo +" |validado: "+validado);
-                System.out.println("Datos-> nombre= "+nomVend+", correo= "+correo+" ,telefono: "+telefono);
+                lcat.add(new CatalogoObject("Catalogo",nomVend,R.drawable.computadoras));
+                Log.e("Datos", "nombre= "+nomVend+", correo= "+correo+" ,telefono: "+telefono);
             }catch (JSONException e){
                 Log.e("Error parseo",e.getMessage());
             }
