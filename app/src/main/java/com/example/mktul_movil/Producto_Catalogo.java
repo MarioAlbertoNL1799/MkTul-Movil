@@ -7,13 +7,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Producto_Catalogo extends AppCompatActivity {
-
+    TextView titulo, vendedor;
+    String tienda, cpersona;
     List<Producto> items;
 
     @Override
@@ -22,6 +24,14 @@ public class Producto_Catalogo extends AppCompatActivity {
         setContentView(R.layout.activity_producto__catalogo);
 
         RecyclerView recview = findViewById(R.id.recycler);
+        titulo = findViewById(R.id.textView_Registro2);//dato a pasar variable
+        vendedor = findViewById(R.id.textView3);
+
+        tienda = getIntent().getStringExtra("Tienda");
+        cpersona = getIntent().getStringExtra("Vendedor");
+
+        titulo.setText(tienda);
+        vendedor.setText(cpersona);
 
         items = new ArrayList<>();
 
