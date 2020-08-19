@@ -99,7 +99,7 @@ public class Catalogos extends AppCompatActivity {
                 correo = jsonObject.getString("correo");
                 telefono = jsonObject.getString("telefono");
                 //adapter.add(id_as + ": " + correo +" |validado: "+validado);
-                Log.e("Datos: nombre= "+nomVend+", correo= "+correo+" ,telefono: "+telefono,null);
+                System.out.println("Datos-> nombre= "+nomVend+", correo= "+correo+" ,telefono: "+telefono);
             }catch (JSONException e){
                 Log.e("Error parseo",e.getMessage());
             }
