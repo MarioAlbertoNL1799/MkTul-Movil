@@ -46,19 +46,19 @@ public class MainActivity extends AppCompatActivity {
     public void ingreso(View view){
         usuario = eTxt_Usuario.getText().toString();
         switch (usuario){
-            case "admin":
+            case "admin1290":
                 Intent intent = new Intent(this, Config_Admin.class);
                 intent.putExtra("dato_inicio",usuario);//envio de dato de login, cambiar por variable obtenida de api
                 startActivity(intent);
                 finish();
                 break;
-            case "consumidor":
+            case "cons1290":
                 Intent intent1 = new Intent(this, Config_Cuenta.class);
                 intent1.putExtra("dato_inicio",usuario);
                 startActivity(intent1);
                 finish();
                 break;
-            case "vendedor":
+            case "vend1290":
                 Intent intent2 = new Intent(this, Config_Vendedor.class);
                 intent2.putExtra("dato_inicio",usuario);
                 startActivity(intent2);
