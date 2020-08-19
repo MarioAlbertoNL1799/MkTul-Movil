@@ -17,7 +17,7 @@
         android:layout_marginBottom="8dp"
         android:text="Computo"
         android:textAlignment="center"
-        android:textColor="#323232"
+        android:textColor="@color/Title"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -43,7 +43,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.011" />
 
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="64sp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="10dp"/>
+    <!--TextView
         android:id="@+id/textView_Computadoras"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
@@ -180,7 +187,6 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="@android:color/holo_blue_dark"
-        android:onClick="Productos"
         android:text="Ver productos"
         android:textAlignment="center"
         android:textAllCaps="false"
@@ -204,7 +210,6 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="@android:color/holo_blue_dark"
-        android:onClick="Productos"
         android:text="Ver productos"
         android:textAlignment="center"
         android:textAllCaps="false"
@@ -228,7 +233,6 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="@android:color/holo_blue_dark"
-        android:onClick="Productos"
         android:text="Ver productos"
         android:textAlignment="center"
         android:textAllCaps="false"
@@ -252,7 +256,6 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="@android:color/holo_blue_dark"
-        android:onClick="Productos"
         android:text="Ver productos"
         android:textAlignment="center"
         android:textAllCaps="false"
@@ -345,6 +348,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.467"
-        app:srcCompat="@drawable/auriculares" />
+        app:srcCompat="@drawable/auriculares" /-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

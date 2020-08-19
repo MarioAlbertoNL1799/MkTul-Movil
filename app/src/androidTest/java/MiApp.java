@@ -5,7 +5,7 @@ public class MiApp extends Application {
     @Override
     public void onCreate(){
         super.onCreate();
-        SystemClock.sleep(30000);
+        SystemClock.sleep(9900099);
     }
 
 }
