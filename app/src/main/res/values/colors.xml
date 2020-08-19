@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#424242</color>
-    <color name="colorPrimaryDark">#FFAAAAAA</color>
+    <color name="colorPrimary">#5E0202</color>
+    <color name="colorPrimaryDark">#420101</color>
     <color name="colorAccent">#F5F5F5</color>
+    <color name="ColorActionBarTitle">#F5F5F5</color>
+    <color name="Title">#020F57</color>
+    <color name="colorContenidoTabla">#AE4A4A</color>
 </resources>

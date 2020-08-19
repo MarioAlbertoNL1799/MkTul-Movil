@@ -7,159 +7,168 @@
     tools:context=".AdminVendedores">
 
 
+    <TextView
+        android:id="@+id/textView_vendedores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Lista de Vendedores"
+        android:textAlignment="center"
+        android:textColor="@color/Title"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="Lista de Vendedores" />
+
     <ImageButton
         android:id="@+id/imageButtonMenu_Config4"
         style="@android:style/Widget.ImageButton"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/confi"
         android:onClick="InicioCuenta"
+        android:background="@drawable/confi"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintHorizontal_bias="0.215"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.986"
-        app:srcCompat="@drawable/confi" />
+        app:layout_constraintVertical_bias="0.983" />
 
     <ImageButton
         android:id="@+id/imageButtonMenu_Vendedores3"
         style="@android:style/Widget.ImageButton"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/vendedor__2_"
+        android:background="@drawable/boss"
         android:onClick="Vendedores"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.196"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.983"
-        app:srcCompat="@drawable/confi" />
+        app:layout_constraintVertical_bias="0.983" />
 
     <ImageButton
         android:id="@+id/imageButtonMenu_Cerrar4"
         style="@android:style/Widget.ImageButton"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/logout"
         android:onClick="Acceso"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.873"
+        app:layout_constraintHorizontal_bias="0.792"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.979" />
+        app:layout_constraintVertical_bias="0.983" />
 
     <View
-        android:id="@+id/divider4"
-        android:layout_width="468dp"
+        android:id="@+id/divider"
+        android:layout_width="412dp"
         android:layout_height="2dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@android:color/darker_gray"
+        android:background="@color/Title"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.901" />
+        app:layout_constraintVertical_bias="0.886" />
 
     <TextView
-        android:id="@+id/textViewMenu_Config4"
+        android:id="@+id/textViewMenu_Config"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="8dp"
         android:text="Configuración"
-        android:textColor="@android:color/background_dark"
-        android:textSize="10sp"
+        android:textColor="@color/Title"
+        android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintHorizontal_bias="0.157"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView_ConfigCuenta"
         app:layout_constraintVertical_bias="1.0"
         tools:text="Configuración" />
 
     <TextView
-        android:id="@+id/textViewMenu_Vendedor2"
+        android:id="@+id/textViewMenu_Compras"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="8dp"
         android:text="Vendedores"
-        android:textColor="@android:color/background_dark"
-        android:textSize="10sp"
+        android:textColor="@color/Title"
+        android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.166"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView_ConfigCuenta"
         app:layout_constraintVertical_bias="1.0"
         tools:text="Vendedores" />
 
     <TextView
-        android:id="@+id/textViewMenu_Cerrar4"
+        android:id="@+id/textViewMenu_Cerrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="8dp"
         android:text="Cerrar sesión"
-        android:textColor="@android:color/background_dark"
-        android:textSize="10sp"
+        android:textColor="@color/Title"
+        android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.901"
+        app:layout_constraintHorizontal_bias="0.844"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView_ConfigCuenta"
         app:layout_constraintVertical_bias="1.0"
         tools:text="Cerrar sesión" />
 
-    <TextView
-        android:id="@+id/textView_vendedores"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:text="Lista de vendedores"
-        android:textColor="@android:color/background_dark"
-        android:textSize="30sp"
+    <SearchView
+        android:id="@+id/search"
+        android:layout_width="200dp"
+        android:layout_height="33dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:scrollbarSize="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Lista de vendedores" />
-
-    <SearchView
-        android:layout_width="200dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="160dp"
-        android:backgroundTint="@android:color/background_dark"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.838"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintVertical_bias="0.116" />
 
     <TableLayout
-        android:layout_width="365dp"
-        android:layout_height="359dp"
-        android:layout_marginTop="216dp"
-        android:background="@color/colorPrimaryDark"
+        android:id="@+id/tableLayout"
+        android:layout_width="320dp"
+        android:layout_height="370dp"
+        android:layout_marginTop="148dp"
+        android:background="@color/colorContenidoTabla"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -169,31 +178,34 @@
 
             <TextView
                 android:id="@+id/textView4"
-                android:layout_width="95dp"
+                android:layout_width="108dp"
                 android:layout_height="wrap_content"
                 android:background="@color/colorPrimary"
                 android:text="Nombre"
+                android:textAlignment="center"
                 android:textColor="@color/colorAccent"
-                android:textSize="18sp"
+                android:textSize="20sp"
                 tools:text="Nombre" />
 
             <TextView
                 android:id="@+id/textView20"
-                android:layout_width="75dp"
+                android:layout_width="106dp"
                 android:layout_height="wrap_content"
                 android:background="@color/colorPrimary"
                 android:text="Correo"
+                android:textAlignment="center"
                 android:textColor="@color/colorAccent"
-                android:textSize="18sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView22"
-                android:layout_width="85dp"
-                android:layout_height="wrap_content"
+                android:layout_width="106dp"
+                android:layout_height="match_parent"
                 android:background="@color/colorPrimary"
                 android:text="Telefono"
+                android:textAlignment="center"
                 android:textColor="@color/colorAccent"
-                android:textSize="18sp"
+                android:textSize="20sp"
                 tools:text="Teléfono" />
 
         </TableRow>
